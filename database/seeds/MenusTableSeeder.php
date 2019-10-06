@@ -13,7 +13,7 @@ class MenusTableSeeder extends Seeder
     {
         $categories = factory(\App\Models\Category::class, 5)->create();
         $categories->each(function($category){
-            factory(\App\Models\Menu::class, 50)->create([
+            factory(\App\Models\Menu::class, 15)->create([
                 'category_id' => $category->id
             ]);
         });
